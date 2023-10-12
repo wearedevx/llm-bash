@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PROMPT_NAME="${1}"
+
+source run.sh "oll" "${PROMPT_NAME}"
