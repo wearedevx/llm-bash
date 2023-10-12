@@ -1,5 +1,3 @@
 #!/bin/bash
 
-PROMPT_NAME="${1}"
-
-source run.sh "llm" "${PROMPT_NAME}"
+source run.sh "llm" "$@"

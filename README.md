@@ -30,7 +30,7 @@ You can use the wrappers directly:
 
 ```bash
 # single line use
-llm translate/french "Hello there! How are you today?"
+lm translate/french "Hello there! How are you today?"
 
 # multi-line entry, Ctrl-D after a return line to run the inference
 echo "$(cat)" | llm translate/french
