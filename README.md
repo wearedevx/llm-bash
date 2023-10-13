@@ -6,6 +6,8 @@ See my blog post [Follow up "vim + llm = 🔥": small things that awww](https://
 
 It works on VIM, NeoVIM, Emacs and even VSCode.
 
+![code/fill demo action](demo.gif)
+
 ## Setting Things Up
 
 ### 1. Install Required Dependencies
@@ -69,8 +71,8 @@ Feel free to contribute your own prompts to this repository. I'll be happy to ad
 
 ## More Experiments
 
-We share our experiments and our journey through our newsletter (Modern Chaos)[https://modernchaos.heytwist.com/]
+We share our experiments and our journey through our newsletter [Modern Chaos](https://modernchaos.heytwist.com/)
 
 Modern chaos is a newsletter exploring tech and AI through the journey of a dev agency shifting from services to product design. We share our notes, analysis and experiments.
 
-(Subscribe)[https://modernchaos.heytwist.com/]
+[Subscribe](https://modernchaos.heytwist.com/)
