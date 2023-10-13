@@ -1,6 +1,6 @@
 # LLM-Bash - A Wrapper for llm & Ollama made for your code editors
 
-This is the result of experiments with the visual-mode and command-line mode in vi. By combining a bash utility wrapping AI CLIs with the flow "Selection -> Run Shell Command on Selection" -> "Replace Selection", you gain powerful AI capabilities.
+This is the result of experiments with the visual-mode and command-line mode in vi. By combining a bash utility wrapping AI CLIs with the flow "Selection -> Run Shell Command on Selection -> Replace Selection", you gain powerful AI capabilities.
 
 See my blog post [Follow up "vim + llm = 🔥": small things that awww](https://modernchaos.heytwist.com/p/follow-up-vim-llm-small-things-that-awww)
 
