@@ -42,6 +42,3 @@ ${input}
 OUTPUT:"
 
 temperature=0.3
-
-# only consistent model working
-llm_model="gpt-3.5-turbo"

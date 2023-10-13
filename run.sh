@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPT_DIR="$( cd "$( dirname "$(readlink -f "$0")" )" && pwd )"
+
 function display_help() {
     cat << EOF
 Usage: lm [OPTION] [PROMPT]
@@ -58,7 +60,6 @@ set -- "${positional_args[@]}"
 CLI="${1}"
 PROMPT_NAME="${2}"
 TEXT="${3}"
-SCRIPT_DIR="$( cd "$( dirname "$(readlink -f "$0")" )" && pwd )"
 PROMPT_PATH="${SCRIPT_DIR}/prompts/${PROMPT_NAME}.sh"
 TEMPERATURE="${temperature:-0.7}"
 

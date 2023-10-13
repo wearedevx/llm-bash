@@ -1,62 +1,76 @@
-# LLM-Bash - Bash Wrapper around LLM-CLI and Ollama for VIM, NEOVIM and EMACS.
+# LLM-Bash - A Wrapper for llm & Ollama made for your code editors
 
-## Getting Started
+This is the result of experiments with the visual-mode and command-line mode in vi. By combining a bash utility wrapping AI CLIs with the flow "Selection -> Run Shell Command on Selection" -> "Replace Selection", you gain powerful AI capabilities.
 
-### Install dependencies
+See my blog post [Follow up "vim + llm = 🔥": small things that awww](https://modernchaos.heytwist.com/p/follow-up-vim-llm-small-things-that-awww)
 
-You can use both LLM-CLI and Ollama. I use both to experiment with many different models, local and through APIs like OpenAI or Together.
+It works on VIM, NeoVIM, Emacs and even VSCode.
 
-- [LLM-CLI](https://github.com/simonw/llm): A CLI utility and Python library for interacting with Large Language Models, both via remote APIs and models that can be installed and run on your own machine.
+## Setting Things Up
 
-To access a large collection of open-source model, you can install the plugin [llm-together](https://github.com/wearedevx/llm-together)
+### 1. Install Required Dependencies
 
-- [Ollama](ollama.ai/): Get up and running with Llama 2 and other large language models locally
+Explore a myriad of models, both local and via robust APIs such as OpenAI and Together.
 
-I recommend using Mistral 7B OpenOrca unless you have resources to run more demanding models locally.
+- [LLM-CLI](https://github.com/simonw/llm): A robust CLI tool and Python library for interfacing with LLMs, catering to both remote APIs and local installations.
 
-### Add the project to your $PATH
+For those willing to try large open-source models, consider adding [llm-together](https://github.com/wearedevx/llm-together).
 
-In order to be able to invoke `lm` (llm) or `oll` (ollama) from your terminal or editors, you will need to add the root folder of this project to your $PATH
+- [Ollama](ollama.ai/): A straightforward approach to working with Llama 2 and other open-source language models on a local setup.
 
-Add this line to your `.zshrc` or `.bashrc`
+Note: It's advisable to start with Mistral 7B OpenOrca unless you're equipped to handle more resource-intensive models.
+
+### 2. Update your $PATH
+
+To efficiently call upon `lm` (representing llm) or `oll` (representing ollama) from your terminal or editor, integrate the main directory of this project into your $PATH.
+
+Incorporate the following line into your `.zshrc` or `.bashrc`:
 
 ```bash
-export PATH=$PATH:<absolute-path-to-this-folder>
+export PATH=$PATH:<path-to-the-project-directory>
 ```
 
-### Test in your terminal
+### 3. Experiment in Your Terminal
 
-You can use the wrappers directly:
+Engage with the wrappers directly:
 
 ```bash
-# single line use
+# Quick translation to French:
 lm translate/french "Hello there! How are you today?"
 
-# multi-line entry, Ctrl-D after a return line to run the inference
+# For a multi-line input, use Ctrl-D post entry to initiate the process:
 echo "$(cat)" | llm translate/french
 ```
 
-### Use with VIM, NeoVIM, Emacs and VSCode
+### 4. Integration with VIM, NeoVIM, Emacs & VSCode
 
-Your text selection will be the context used by the prompts and will be replace in-place by the output of the LLM.
+The text you select serves as the context for the LLM's prompts, which in turn, will be replaced by the LLM's output.
 
-#### Vim and the likes, including Emacs Evil-Mode
+#### Procedures for Vim, NeoVIM, Emacs:
 
-1. Select a region in visual mode.
-2. Enter the command-line mode, tap `:` then `!`
-3. Type `lm [prompt-name]` to invoke llm-cli or `oll [prompt-name]` to invoke ollama
+1. Initiate a region selection in visual mode.
+2. Transition to the command-line mode with `:` followed by `!`.
+3. Enter `lm [prompt-name]` to activate llm-cli or `oll [prompt-name]` to call ollama.
 
-Examples
+Examples for clarity:
 
 ```bash
-lm -h # list availables prompts
-oll -h # same
-lm code/fill # invoke lm to use the prompt code/fill to replace all occurrences of //fill in the selected region by the missing code logic
-oll translate/french # translate to French
+lm -h # Displays available prompts
+oll -h # Likewise
+lm code/fill # Engage llm to utilize the 'code/fill' prompt
+oll translate/french # Translation to French using Ollama CLI
 ```
 
-### Add your own prompts
+### 5. Customize with Your Prompts
 
-Prompts are located under the folder `prompts`, just add your own bash files or directory and it will show up in the prompt list.
+Add your own bash scripts or directories under the `prompts` folder, and they'll be integrated into the prompt list.
 
-If you have great prompts to share to others, open a pull request, I will be happy to add it to the collection.
+Feel free to contribute your own prompts to this repository. I'll be happy to add new ones.
+
+## More Experiments
+
+We share our experiments and our journey through our newsletter (Modern Chaos)[https://modernchaos.heytwist.com/]
+
+Modern chaos is a newsletter exploring tech and AI through the journey of a dev agency shifting from services to product design. We share our notes, analysis and experiments.
+
+(Subscribe)[https://modernchaos.heytwist.com/]
