@@ -8,6 +8,20 @@ It works on VIM, NeoVIM, Emacs and even VSCode.
 
 ![code/fill demo action](demo.gif)
 
+**Prompts included**
+
+- code/comment: Add comments to code
+- code/explain: Explain a piece of code by adding comments
+- code/fill: Replace the //fill keywords with the missing code logic
+- code/fix: Fix errors in code syntax or logic
+- code/name: Rename code symbols for clarity
+- email/draft: Create an email from instructions or notes
+- email/reply: Reply to an email in the sender language
+- personal/mealplan: Generate a meal plan for the next 7 days
+- translate/english: Translate text to English
+- translate/french: Translate text to French
+
+
 ## Setting Things Up
 
 ### 1. Install Required Dependencies
